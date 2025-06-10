@@ -1,56 +1,135 @@
-template/
-├─ app/
-│  ├─ (tabs)/
-│  │  ├─ a/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  ├─ b/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  ├─ c/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  ├─ d/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  └─ _layout.tsx
-│  ├─ _layout.tsx
-│  ├─ goodbye.tsx
-│  ├─ index.tsx
-│  └─ welcome.tsx
-├─ assets/
-│  ├─ fonts/
-│  │  └─ SpaceMono-Regular.ttf
-│  └─ images/
-│     ├─ favicon.png
-│     ├─ icon.png
-│     └─ splash.png
-├─ components/
-│  ├─ a/
-│  │  └─ userCard.tsx
-│  ├─ b/
-│  │  └─ userCard.tsx
-│  ├─ c/
-│  │  └─ userCard.tsx
-│  ├─ d/
-│  │  └─ userCard.tsx
-│  ├─ bottomNav.tsx
-│  ├─ logoutFAB.tsx
-│  ├─ sectionHeader.tsx
-│  ├─ skeletonLoad.tsx
-│  ├─ toastBar.tsx
-│  └─ topFAB.tsx
-├─ constants/
-│  ├─ color.ts
-│  └─ theme.ts
-├─ contexts/
-│  ├─ api/
-│  │  └─ api.tsx
-│  ├─ authContext.tsx
-│  ├─ bottomContext.tsx
-│  ├─ themeContext.tsx
-│  └─ tokenContext.tsx
-├─ hooks/
-│  ├─ useBottomNav.tsx
-│  └─ useToast.tsx
+GymCo
+├─ Overview
+│   └─ A mobile app designed for gym-goers to plan, start, and track their workouts, discover training routines, explore gym events, and monitor their personal fitness journey.
+│
+├─ User Persona
+│   └─ Member A – self-motivated gym-goer who wants to follow structured workouts, track progress, and explore events or training opportunities at their gym.
+│
+├─ Core Modules
+│   ├─ Authentication
+│   │   ├─ Email/password or phone OTP login
+│   │   └─ Social login optional
+│
+│   ├─ Dashboard
+│   │   ├─ Personalized greeting and today’s plan
+│   │   ├─ Current streaks or progress highlights
+│   │   └─ Quick access to start workout or log activity
+│
+│   ├─ Workout Planner
+│   │   ├─ Create daily workout to-do list
+│   │   ├─ Select from presets or add custom sets/reps
+│   │   └─ Save as template for reuse
+│
+│   ├─ Workout Timer
+│   │   ├─ Start a workout session (Pomodoro-style or free mode)
+│   │   ├─ Track total duration and rest intervals
+│   │   └─ Pause, skip, or end workout
+│
+│   ├─ Explore
+│   │   ├─ Discover workout routines by goal (strength, fat burn, etc.)
+│   │   ├─ Filter by time, difficulty, or equipment
+│   │   └─ Save routines to personal planner
+│
+│   ├─ Events and Training
+│   │   ├─ View upcoming gym events or group challenges
+│   │   ├─ Register for workshops or bootcamps
+│   │   └─ Book personal training or assessment slots
+│
+│   ├─ Log
+│   │   ├─ Track finished workouts by date
+│   │   ├─ View progress: streaks, calories, time spent
+│   │   └─ Export logs or share with a trainer
+│
+│   └─ Profile
+│       ├─ Edit personal goals and preferences
+│       ├─ View account/membership info
+│       └─ Connect wearables or health app data
+│
+├─ Tabs
+├─ Home
+│   ├─ Daily Overview
+│   │   ├─ Display current day’s planned workout or rest day
+│   │   ├─ Quick action to start, resume, or log workout
+│   │   └─ Smart rest day suggestions based on fatigue or streak
+│   │
+│   ├─ Progress Dashboard
+│   │   ├─ Weekly and monthly workout streak tracker
+│   │   ├─ Time spent in zones (strength, cardio, recovery)
+│   │   └─ Personal records and badges earned
+│   │
+│   ├─ Health Sync (optional)
+│   │   ├─ Show heart rate, calories, and steps (sync with wearables)
+│   │   └─ Recovery status or readiness score
+│   │
+│   └─ Smart Suggestions
+│       ├─ Recommended plan based on past logs
+│       ├─ Suggested routines based on time of day and energy level
+│       └─ Motivational quote or video
 
+│
+├─ Plan
+│   ├─ Workout Builder
+│   │   ├─ Build routines using preset exercises or custom inputs
+│   │   ├─ Drag and drop sets, reps, rest intervals
+│   │   └─ Add supersets, drop sets, warm-ups and cooldowns
+│   │
+│   ├─ Workout Scheduler
+│   │   ├─ Plan weekly/monthly schedule (auto recommend gaps)
+│   │   └─ Sync with personal calendar or reminders
+│   │
+│   ├─ Active Session
+│   │   ├─ In-session tracker with timer, sound cues, swipe navigation
+│   │   ├─ Real-time progress bar and next exercise preview
+│   │   └─ Rest countdown with optional music or breathing guide
+│   │
+│   └─ Post Workout Summary
+│       ├─ Input RPE (rate of perceived exertion), notes, injury flag
+│       ├─ Calories burned, estimated volume lifted
+│       └─ Option to save session as template
+
+│
+├─ Explore
+│   ├─ Workout Library
+│   │   ├─ Filter routines by goals (fat loss, hypertrophy, strength)
+│   │   ├─ Categories: No-equipment, Dumbbell-only, Gym machines
+│   │   └─ Browse by duration, body focus, or level
+│   │
+│   ├─ Video Tutorials
+│   │   ├─ High-quality video walkthroughs of each exercise
+│   │   ├─ Tips for form correction and common mistakes
+│   │   └─ Option to bookmark or queue for offline viewing
+│   │
+│   ├─ Community Picks
+│   │   ├─ See top routines liked by others in your gym or area
+│   │   └─ Comment, like, and save to plan
+│   │
+│   └─ AI Recommendations
+│       ├─ Suggest full routine based on past progress or skipped days
+│       ├─ Dynamic adjuster if you say “I have 30 mins and 2 dumbbells”
+│       └─ Weekly challenges (e.g., "Leg Burner of the Week")
+
+│
+├─ Profile
+│   ├─ Personal Dashboard
+│   │   ├─ View and edit name, weight, height, fitness goals
+│   │   └─ Adjust training difficulty or focus
+│   │
+│   ├─ Progress Tracker
+│   │   ├─ Timeline of body stats, strength gains, and logged sessions
+│   │   └─ Export progress to PDF or share to coach
+│   │
+│   ├─ Preferences and Settings
+│   │   ├─ Toggle dark mode, units (lbs/kg), rest timer duration
+│   │   └─ Connect devices (Apple Health, Google Fit, Garmin, etc.)
+│   │
+│   └─ Help and Support
+│       ├─ FAQs and app tutorials
+│       ├─ Chat or contact trainer/instructor
+│       └─ App feedback and bug report
+
+│
+├─ Stretch Ideas
+│   ├─ Real-time heart rate integration (via wearable)
+│   ├─ AI-generated workout plan from past log history
+│   ├─ Challenge friends or unlock achievement badges
+│   └─ Monthly report card summarizing effort and improvements
