@@ -96,10 +96,47 @@ export default function Settings() {
             right={() => <Switch value={false} onValueChange={() => {}} />}
           />
         </List.Section>
+
+        <List.Section>
+          <List.Subheader
+            style={{
+              color: theme.colors.onSurface,
+              fontSize: wp("4.5%"),
+              fontWeight: "600",
+            }}
+          >
+            Support & Feedback
+          </List.Subheader>
+          <List.Item
+            title="FAQs and Tutorials"
+            left={(props) => (
+              <List.Icon {...props} icon="help-circle-outline" />
+            )}
+            onPress={() => {}}
+          />
+          <List.Item
+            title="Send Feedback"
+            left={(props) => (
+              <List.Icon {...props} icon="message-text-outline" />
+            )}
+            onPress={() => {}}
+          />
+          <List.Item
+            title="Report a Bug"
+            left={(props) => <List.Icon {...props} icon="bug-outline" />}
+            onPress={() => {}}
+          />
+          <List.Item
+            title="Contact Support"
+            left={(props) => (
+              <List.Icon {...props} icon="account-question-outline" />
+            )}
+            onPress={() => {}}
+          />
+        </List.Section>
       </ScrollView>
 
       <TopFAB visible={showFab} scrollRef={scrollRef} />
-
       <LogoutFAB visible={showLogoutFab} />
     </>
   );
